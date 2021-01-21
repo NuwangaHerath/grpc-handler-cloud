@@ -38,6 +38,7 @@ public class GrpcserverApplication {
 
         try {
             server.start();
+            System.out.println("grpc custom Server started at port 8030");
         } catch (IOException e) {
             e.printStackTrace();
         }
