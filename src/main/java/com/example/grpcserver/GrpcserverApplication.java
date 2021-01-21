@@ -32,20 +32,20 @@ public class GrpcserverApplication {
 
         SpringApplication.run(GrpcserverApplication.class, args);
 
-//        Server server = ServerBuilder
-//                .forPort(8030)
-//                .addService(new ServiceImpl()).build();
-//
-//        try {
-//            server.start();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            server.awaitTermination();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        Server server = ServerBuilder
+                .forPort(8030)
+                .addService(new ServiceImpl()).build();
+
+        try {
+            server.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            server.awaitTermination();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
