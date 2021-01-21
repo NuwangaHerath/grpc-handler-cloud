@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "com.example.grpc.server";
+
+service service{
+  rpc handleEvent(Event) returns (Log){};
+}
+
+message Event{
+  string  event = 1;
+  map<string,string> eventProperties = 3;
+}
+
+message Log{
+  string log = 1;
+}
